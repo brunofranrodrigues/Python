@@ -67,7 +67,7 @@ if args.deluser == None:
     check_users_puppet = (f'if sudo cat /etc/puppet/modules/usuarios-sec/manifests/init.pp | grep -w ' + username + ' > /dev/null; then echo "Found ' + username + '"; else echo "Not Found"; fi\n')
     # LDAP
     # comando para validar usuarios no ldap
-    check_users_ldap = (f'if sudo ldapsearch -x -D "cn=gerente,c=BR"  -w Ches2FAPR7Nub -H ldap://192.168.248.170 -b "ou=Datacenter,o=Diveo,c=BR" -s sub uid="' + username + '" | grep "numEntries:" > /dev/null; then echo "Found ' + username + '"; else echo "Not Found"; fi\n')
+    check_users_ldap = (f'if sudo ldapsearch -x -D "cn=gerente,c=BR"  -w x b -H ldap://192.168.248.170 -b "ou=Datacenter,o=Diveo,c=BR" -s sub uid="' + username + '" | grep "numEntries:" > /dev/null; then echo "Found ' + username + '"; else echo "Not Found"; fi\n')
 else:
     ### remover contas nas plataformas
     del_user = (f'sudo userdel -r ' + delusername + '\n')
@@ -108,7 +108,7 @@ def connect_jump(device, command):
         "device_type": "linux_ssh",
         "ip": "187.16.26.35",
         "username": "hsouza",
-        "password": "P@ssw0rd"
+        "password": "x"
     }
 
     host_user = device['username']
