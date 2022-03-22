@@ -1,0 +1,14 @@
+[
+  {
+    "device_type": "linux_ssh",
+    "ip": "192.168.2.131",
+    "username": "sysadmin",
+    "password": "P@ssw0rd"
+  },
+  {
+    "device_type": "linux_ssh",
+    "ip": "192.168.2.132",
+    "username": "sysadmin",
+    "password": "P@ssw0rd"
+  }
+]
